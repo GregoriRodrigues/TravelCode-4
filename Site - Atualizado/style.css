@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+.parallax-image {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+#nav {
+    background-color: rgba(255, 255, 255, 0.346);
+    backdrop-filter: blur(6px);
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 990;
+}
+
+#nav * {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#nav .navbar-nav {
+    gap: 1.4rem;
+}
+
+#nav .navbar-nav li a {
+    position: relative;
+}
+
+#nav .navbar-nav li a::before {
+    position: absolute;
+    bottom: -4px;
+    content: "";
+    width: 0;
+    background-color: #b21e0a;
+    height: 2px;
+    right: 0;
+    transition: all .4s ease-in-out;
+}
+
+#nav .navbar-nav li:hover a::before {
+    width: 100%;
+}
+
+#home {
+    background-image: url('Paisagens/');
+    background-size: cover;
+    background-attachment: fixed;
+    /*width: 100vw;*/
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#video {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: -130px;
+    /* Diminui o espaço no topo da imagem */
+
+}
+
+
+
+#home .contain {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 2rem;
+    padding: 0 3rem;
+}
+
+#home .contain h1 {
+    font-size: 4rem;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+#home .contain h1 span {
+    font-size: 2em;
+}
+
+#home .contain p {
+    font-size: 1.3rem;
+    width: 52%;
+    border-radius: 10px;
+
+}
+
+#home .contain .button {
+    /*--------------------------------------------aqui-*/
+    width: fit-content;
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #fff;
+    background-color: rgb(198, 30, 8);
+    backdrop-filter: blur(6px);
+
+}
+
+.icons {
+    position: absolute;
+    padding: 1.4rem 1rem;
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #ffffff;
+    border-radius: 15px 0 0 15px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background-color: rgb(198, 30, 8);
+    backdrop-filter: blur(6px);
+   
+}
+
+/* Estilos para o formulário de buscar voos */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.form-wrapper {
+    max-width: 1300px;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: rgba(14, 7, 7, 0.515);
+    border-radius: 10px;
+    backdrop-filter: blur(1px);
+    animation: fadeIn 0.1s ease-in-out 1s forwards; /* Adiciona a animação */
+    
+}
+
+
+.form-wrapper:hover {
+    opacity: 0.11; /* Faz o formulário aparecer quando o mouse passa por cima */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+h2{
+    text-align: center;
+}
+.form-row h2 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #0b0219;
+    
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 15px;
+    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+   
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group select {
+    width: 100%;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: rgba(149, 3, 3, 0.978);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.9s;
+    border: none;
+    color: white;
+}
+
+.form-container button:hover {
+    background-color: rgba(133, 7, 7, 0.992);
+}
+
+/* Responsividade */
+@media (max-width: 1006px) {
+    #home .contain p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 688px) {
+    html {
+        font-size: 80%;
+    }
+
+    #home .contain {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* ------------------------------ INICIO - Formulário Fale Conosco  ------------------------------- */
+
+
+#fale-conosco {
+    background-color: rgba(142, 138, 138, 0.336);
+    /* Fundo de vidro */
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+#fale-conosco .titulo-fale-conosco {
+    text-align: center;
+    padding: 20px;
+
+}
+
+#fale-conosco .fale-conosco-form {
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fundo de vidro */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#fale-conosco .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#fale-conosco .form-group.full {
+    flex-direction: column;
+}
+
+#fale-conosco input,
+#fale-conosco textarea {
+    flex-basis: 48%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.926);
+    /* Fundo de vidro */
+    backdrop-filter: blur(5px);
+    /* Efeito de desfoque no fundo */
+    color: #000;
+    transition: background-color 0.9s;
+    /* Transição suave da cor de fundo */
+}
+
+#fale-conosco .form-group.full input[type="submit"] {
+    background-color: rgba(255, 25, 0, 0.987);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Transições suaves */
+}
+
+#fale-conosco .form-group.full input[type="submit"]:hover {
+    background-color: #c6390a;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra aumentada no hover */
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+    .fale-conosco-form .form-group {
+        flex-direction: column;
+    }
+}
+
+/* ------------------------------ FIM  - Formulário  Fale Conosco  ------------------------------- */
+
+
+
+/* ------------------------------ INCIO PACOTES  ------------------------------- */
+
+.pacotes {
+    background: rgba(231, 230, 230, 0.523);
+    padding: 15px;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.pacotes .pacotes-cards {
+    display: flex;
+    margin: auto;
+    max-width: 990px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pacotes .titulo-pacotes {
+    width: 20%;
+    margin: 10px auto;
+    padding-top: 70px;
+    text-align: center;
+    border-radius: 10px;
+    position: flex;
+}
+
+.pacotes .card {
+    width: 250px;
+    height: 350px;
+    background: rgb(255, 255, 255);
+    border-radius: 24px 0px;
+    margin: 30px;
+    position: relative;
+}
+
+.pacotes .card-imagem1 {
+    width: 250px;
+    height: 200px;
+    border-radius: 24px 0 0 0;
+    object-fit: cover;
+}
+
+.pacotes .card-content {
+    padding: 0 15px;
+}
+
+.pacotes .card-content ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.pacotes .card-content ul li {
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+    color: rgba(86, 82, 82, 0.762);
+    font-weight: bold;
+}
+
+.pacotes .card-content li svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+}
+
+.pacotes .card-content h1 {
+    font-size: 1rem;
+}
+
+.pacotes .card .card-tag-top {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    background: rgba(221, 80, 15, 0.851);
+    border-radius: 8px 0 0 8px;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag-preco {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    background: rgba(68, 8, 8, 0.989);
+    border-radius: 0 8px 8px 0;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* ------------------------------ FIM  - PACOTES  ------------------------------- */
+
+
+/* ------------------------------ INICIO SEÇÃO SERVIÇOS  ------------------------------- */
+
+.servicos {
+    padding: 70px;
+    
+}
+
+.servicos .titulo-servicos {
+    text-align: center;
+    margin: 55px 0;
+}
+
+.servicos .servicos-cards {
+    margin-top: 55px;
+    display: flex;
+    max-width: 950px;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.servicos .card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+/* Estilização para ícones SVG nos cartões de Serviços */
+.servicos .card svg {
+    width: 60px;
+    height: 60px;
+    margin: 50px;
+    transition: 0.9s;
+}
+
+.servicos .card svg:hover {
+    stroke: rgb(234, 0, 0);
+    transform: scale(1.1);
+}
+
+.servicos .card h3 {
+    font-weight: bold;
+    padding: 20px;
+}
+
+.servicos .card p {
+    color: grey;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.servicos .card .card-content {
+    height: 190px;
+    text-align: center;
+}
+
+/* Botão "Saiba Mais" nos cartões de Serviços */
+.servicos .card button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: rgba(209, 4, 4, 0);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.9s;
+    border: none;
+    color: rgba(255, 255, 255, 0.994);
+}
+
+.servicos .card button:hover {
+    background-color: rgba(133, 7, 7, 0.992);
+}
+
+/* ------------------------------ FIM SEÇÃO SERVIÇOS  ------------------------------- */
+
+
+/* ------------------------------ INICIO RODAPÉ  ------------------------------- */
+
+/* Estilo para a seção de rodapé */
+.contato {
+    text-align: center;
+    background-color: #5105059b;
+}
+
+/* Estilo para o título "Contato" */
+.titulo-contatos {
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* Estilo para o cartão no rodapé */
+.contato .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para o logotipo "Travel Code" */
+.footer-logo {
+    font-size: 1.5rem;
+    color: #510505;
+    font-weight: bold;
+}
+
+/* Estilo para os ícones no rodapé (phone, github, instagram, facebook) */
+.footer i {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Estilo para o texto "Desenvolvido por Gregory Rodrigues &copy; 2023" */
+.footer-text {
+    color: white;
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/* ------------------------------ FIM  RODAPÉ  ------------------------------- */
